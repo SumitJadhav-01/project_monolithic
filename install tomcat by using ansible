@@ -1,16 +1,15 @@
-- hosts: all
+ - hosts: web[0],web[1]
   tasks:
     - name: download tomcat from dlcdn
       get_url:
-        url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.87/bin/apache-tomcat-9.0.87.tar.gz"
+        url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz"
         dest: "/root/"
 
     - name: untar the apache file
-      command: tar -zxvf apache-tomcat-9.0.87.tar.gz
-
+      command: tar -zxvf apache-tomcat-9.0.95.tar.gz
 
     - name: rename the tomcat
-      command: mv apache-tomcat-9.0.87 tomcat
+      command: mv apache-tomcat-9.0.95 tomcat
       tags: abc
 
     - name: install java
@@ -24,7 +23,3 @@
     - name: delete two lines in context.xml
       template:
         src: context.xml
-        dest: /root/tomcat/webapps/manager/META-INF/context.xml
-
-    - name: start the tomcat
-      shell: nohup /root/tomcat/bin/startup.sh
