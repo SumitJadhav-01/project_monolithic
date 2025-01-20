@@ -1,5 +1,7 @@
-Project Title: Monolithic Application Deployment Using CI/CD Pipelines
-Objective
+Project Title:
+Monolithic Application Deployment Using CI/CD Pipelines Objective
+
+
 To deploy a monolithic web application on a Tomcat server using an automated CI/CD pipeline. The project incorporates modern DevOps tools and practices to streamline infrastructure provisioning, build automation, artifact management, and application monitoring.
 
 Project files: https://github.com/SumitJadhav-01/project_monolithic.git
